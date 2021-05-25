@@ -61,8 +61,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell = viewModel?.fetchCell(tableView: self.tableView, reuseIdentifier: "cell", indexPath: indexPath)
+       var cell = viewModel?.fetchCell(tableView: self.tableView, reuseIdentifier: "cell", indexPath: indexPath)
         
         guard let cell = cell else {
             return UITableViewCell(style: .default, reuseIdentifier: "cell")

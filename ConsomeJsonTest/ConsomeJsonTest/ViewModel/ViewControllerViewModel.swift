@@ -26,7 +26,7 @@ struct ViewControllerModelView {
     
     public func fetchCell(tableView:UITableView,reuseIdentifier:String, indexPath:IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? UITableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) else {
             return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
         }
         
